@@ -1,4 +1,5 @@
 
+---
 ### IP Address Class
 
 **Class A** : Network | Host | Host | Host
@@ -64,7 +65,6 @@ AND
 ```
 
 ---
-
 ### FLSM
 
 > Fixed Length Subnet Mask
@@ -116,7 +116,6 @@ Source IP를 바꿔줌
 1 : ALL (PAT) : Port Address Translation - Port를 변환해서 보냄
 
 ---
-
 ### D-NAT (Destination-NAT)
 
 외부에서 사설 IP로 접속하기 위해 공인 IP였던 Destination IP(공유기의 IP)를 내부 IP로 바꿔줌
