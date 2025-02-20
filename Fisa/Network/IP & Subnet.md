@@ -128,7 +128,7 @@ Source IP를 바꿔줌
 **IP를 이용해 Mac Address를 알아냄**
 Ping을 보낼때 Dst의 물리 주소를 모르기 때문에 첫번째 Ping은 빠짐
 
-> ARP Request : Dst의 물리주소를 FFFF.FFFF.FFF로 (Dst의 물리주소를 모르기 때문에 Broad Cast로 전송), 모든 통신 장치가 받음
-> ARP Reply : Dst의 물리주소를 알아냈기 때문에 (Src의 물리주소를 알기 때문에 Unicast로 전송), Dst에 물리주소가 저장되어 있음
+> ARP Request : S-Mac에는 Source의 물리주소, D-Mac(Dst의 물리주소)를 FFFF.FFFF.FFFF.FFFF(D-Mac을 모르기 때문에 Broad Cast로 전송), 모든 통신 장치가 받음
+> ARP Reply : D-Mac을 알아냈기 때문에 (Src의 물리주소를 알기 때문에 Unicast로 전송), Dst에 물리주소가 저장되어 있음
 
 알아낸 Mac Address를 ARP Cache Table에 저장함
