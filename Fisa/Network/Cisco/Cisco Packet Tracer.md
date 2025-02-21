@@ -1,3 +1,5 @@
+
+---
 ### 명령어
 
 ```
@@ -45,15 +47,4 @@ Subnet Mask : 255.0.0.0
 `PC2 Gateway` : 10.0.0.1 
 
 ---
-### TTL
-> Time-To-Live
-> Ping으로 보낼고 응답받을때
-
-Window로 Ping을 보내면 128로 Set
-- Router를 거치면 -1 해서 127로 응답 받음
-- Router를 거치지 않으면 128로 응답 받음
-Linux로 Ping을 보내면 255로 Set
-
-기기 거칠때마다 -1
-
 ---

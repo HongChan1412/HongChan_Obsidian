@@ -1,5 +1,51 @@
 
 ---
+### IP : Internet Protocol
+IP는 네트워크의 고유한 주소 체계
+IP주소는 네트워크 부분과 호스트 부분으로 구성
+10진수로 32비트
+
+--- 
+### TCP : Transmission Control Protocol
+신뢰성 있는 데이터 전송
+통신을 시작하기 전 3-Way Handshake를 통해 연결 설정
+통신이 끝나면 4-Way Handshake로 연결 종료
+
+---
+### UDP : User Datagram Protocol
+TCP와 달리 연결을 설정하는 과정이 없음
+데이터를 보내고 확인 없이 끝남
+속도가 빠름
+신뢰성이 낮음
+
+----
+### Subnet Mask
+IP 주소를 네트워크 부분과 호스트 부분으로 나누는 32비트 숫자
+4개의 8비트 블록으로 표현
+
+---
+### Subnetting
+하나의 네트워크를 여러개의 서브넷으로 나누는 기술
+과거 : 낭비되는 IP를 줄이기 위해 사용
+현대 : 분리, 관리의 목적으로 사용
+
+---
+### Router
+서로 다른 네트워크 간의 데이터를 전달하는 장치
+라우팅 테이블을 이용해 목적지 IP로 전달
+패킷을 전달
+
+---
+### Switch
+같은 네트워크 내에서 데이터를 전달하는 장치
+MAC주소로 전달
+데이터프레임을 전달
+
+---
+### Gateway
+내부 네트워크에서 외부 네트워크로 나가는 출입구 역할
+
+---
 ### IP Address Class
 
 **Class A** : Network | Host | Host | Host
@@ -90,8 +136,11 @@ C Class 192.168.0.0 ~ 192.168.255.255 (192.168.0.0 /16)
 
 외부에서는 사설 IP로 접속이 안됨.
 
+![[Pasted image 20250221090850.png]]
+
 ---
 ### 공인 IP (Public IP Address)
+인터넷에서 고유하게 식별되는 IP 주소로, 전 세계에서 접근 가능
 
 ---
 ### 고정 IP (Static IP)
@@ -100,10 +149,11 @@ C Class 192.168.0.0 ~ 192.168.255.255 (192.168.0.0 /16)
 
 ---
 ### 유동 IP (Dynamic IP)
+인터넷에 접속할 때마다 변경되는 공인 IP 주소
 
 ---
 ### DHCP Server
-IP를 자동으로 뿌려줌
+네트워크 장비에 IP 주소를 자동으로 할당해주는 서버
 
 ---
 ### S-NAT (Source-Network Address Translation)
@@ -111,9 +161,9 @@ IP를 자동으로 뿌려줌
 사설 IP를 공인 IP로 바꿔서 웹으로 보내줌
 Source IP를 바꿔줌
 
-1 : 1
-1 : N
-1 : ALL (PAT) : Port Address Translation - Port를 변환해서 보냄
+1 : 1 -> 공인 IP 1개 : 사설 IP 1개
+1 : N -> 공인 IP 1개 : 여러개의 사설 IP
+1 : ALL (PAT) : Port Address Translation ->  공인 IP 1개 + 포트 변경 : 여러개의 사설 IP
 
 ---
 ### D-NAT (Destination-NAT)
@@ -129,6 +179,22 @@ Source IP를 바꿔줌
 Ping을 보낼때 Dst의 물리 주소를 모르기 때문에 첫번째 Ping은 빠짐
 
 > ARP Request : S-Mac에는 Source의 물리주소, D-Mac(Dst의 물리주소)를 FFFF.FFFF.FFFF.FFFF(D-Mac을 모르기 때문에 Broad Cast로 전송), 모든 통신 장치가 받음
-> ARP Reply : D-Mac을 알아냈기 때문에 (Src의 물리주소를 알기 때문에 Unicast로 전송), Dst에 물리주소가 저장되어 있음
+> ARP Reply : 알아낸 D-Mac을 S-Mac으로, D-Mac의 src의 물리주소로 응답
 
 알아낸 Mac Address를 ARP Cache Table에 저장함
+
+![[Pasted image 20250221090725.png]]
+
+![[Pasted image 20250221090747.png]]
+
+---
+### TTL
+> Time-To-Live
+> Ping으로 보낼고 응답받을때
+
+Window로 Ping을 보내면 128로 Set
+- Router를 거치면 -1 해서 127로 응답 받음
+- Router를 거치지 않으면 128로 응답 받음
+Linux로 Ping을 보내면 255로 Set
+
+기기 거칠때마다 -1
