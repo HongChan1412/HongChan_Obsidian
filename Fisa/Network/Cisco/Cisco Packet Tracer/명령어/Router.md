@@ -9,7 +9,7 @@ aliases:
 # 사용가능한 명령어 확인
 Router# ?
 
-# 
+# 명령 실행 중단
 ctrl + shift + 6
 ```
 #### User EXEC 모드
@@ -61,7 +61,7 @@ hongchan-router(config)# enable password cisco
 
 # 배너 설정
 # motd : Message-of-the-Day
-hongchan-router(config)#banner motd $  
+hongchan-router(config# banner motd $  
 Enter TEXT message. End with the character '$'.  
 # 배너에 보여줄 텍스트
 This system is under real-time monitoring.  
