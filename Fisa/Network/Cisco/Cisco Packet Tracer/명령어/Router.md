@@ -68,6 +68,8 @@ This system is under real-time monitoring.
 Unauthorized users please disconnect immediately  
 $
 
+#clock timezone KST 9
+
 # 첫 번째 인터페이스 선택
 Router(config)# interface gigabitEthernet 0/1
 # IP 주소 및 서브넷 마스크 설정
