@@ -32,3 +32,52 @@ VLAN을 많이 사용하면 포트가 낭비될 수 있음
 
 ---
 ### ISL (Inter Switch Link)
+
+802.1Q 사용
+
+Native VLAN
+Hub를 호환해주기 위해 만듬
+지금은 의미 없음
+
+Trunk Port
+: 모든 VLAN이 흘러다닐 수 있는 통로
+: Tagged Port
+: Tag를 붙여가지고 Trunk Port를 사용한다면 다른 VLAN은 인식이 안됨.
+: Trunk Port를 사용하지 않으면 Tag를 안붙이기 때문 다른 VLAN과도 연결이 가능함.
+
+Access Port
+: 하나의 VLAN이 흘러다니는 통로
+: UnTagged Port
+
+native vlan, default vlan은 1
+vlan은 2번부터 사용 가능
+보통 10, 20, 30, 40 으로 셋
+
+Trunk port일때만 VLAN을 붙임
+
+Dynamic Trunk Protocol
+
+---
+###
+Bandwidth : 대역폭
+Throughput : 데이터 전송량
+
+24 Port * 1Gbps(대역폭) * 2
+ 48 Gbps througput
+
+---
+### VTP (VLAN Trunk Protocol)
+
+중앙에서 VLAN을 생성하고 보내기 위함
+
+Server mode
+vtp 생성
+
+Client Mode
+vtp를 생성하지는 못하지만 받긴 해야함
+받은거는 동기화함
+fowarding 사용
+
+Transparent mode
+동기화 받지 않음
+받은거는 fowrding해줌
