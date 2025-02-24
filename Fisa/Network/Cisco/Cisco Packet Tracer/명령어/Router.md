@@ -87,6 +87,9 @@ Router(config-if)# exit
 # 가장 밑 단계로 이동
 Router(config-if)# end
 
+line vty 0 4
+login
+
 ```
 
 > [!info] 중요

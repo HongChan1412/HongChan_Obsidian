@@ -72,6 +72,11 @@ Switch (config)# vtp password cisco
 
 Switch (config)# no vlan
 
+Switch (config)# interface vlan 1
+Switch (config-if)# ip address 192.168.1.2 255.255.255.0
+Switch (config-if)# no shutdown
+
+
 Switch (config-if)# interface range fastEthernet 0/2 - 4
 ```
 

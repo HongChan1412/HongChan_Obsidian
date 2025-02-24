@@ -81,3 +81,8 @@ fowarding 사용
 Transparent mode
 동기화 받지 않음
 받은거는 fowrding해줌
+
+---
+### Management IP
+
+Managed Switch
