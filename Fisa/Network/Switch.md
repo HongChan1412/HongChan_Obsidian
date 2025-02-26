@@ -4,6 +4,13 @@ aliases:
 ---
 
 ---
+### Switch
+2계층 장비
+Mac 주소를 기반으로 프레임을 전달
+Mac address learning & forward
+collision domain을 나눔
+
+---
 ### Poorly Designed
 ![[Pasted image 20250224102857.png]]
 > [!warning] 브로드캐스트 도메인이 너무 큼
@@ -80,9 +87,20 @@ fowarding 사용
 
 Transparent mode
 동기화 받지 않음
-받은거는 fowrding해줌
+받은거는 forwarding₩해줌
 
 ---
 ### Management IP
 
 Managed Switch
+
+---
+### Spaning protocol
+looping 방지
+link aggregation
+cisco에서는 Ether Channel이라고 불림
+
+---
+### Multi Layer Switch
+router port
+svi

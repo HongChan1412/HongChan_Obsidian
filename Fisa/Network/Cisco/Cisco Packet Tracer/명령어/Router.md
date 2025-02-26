@@ -89,6 +89,8 @@ Router(config-if)# end
 
 line vty 0 4
 login
+enable password
+
 
 ```
 
