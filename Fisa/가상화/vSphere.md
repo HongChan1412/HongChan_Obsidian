@@ -59,3 +59,44 @@ install vmware tools
 
 snapshot > snapshot manager > take snapshot
 go to로 분기점 이동 후 take snapshot하면 분기 생성
+
+File > Connect to Server
+
+---
+### Workstation Network
+
+Bridge
+NAT
+Host Only
+
+
+VMnet8 : NAT
+VMnet1 : HostOnly
+
+---
+### ESXI VMware 생성
+
+데이터스토어 브라우저 > 디렉토리 생성 > 업로드
+
+가상 시스템 > 새 가상 시스템 > 씬 프로비저닝 > 데이터스토어에 파일 업로드 > 데이터스토어에서 iso 파일 선택해서 CD/Rom 인식
+
+---
+### VCSA
+vCenter Server Appliance Installation
+
+
+1. 어느 ESXI에 VCSA 설치할지 결정
+	1. 어느 데이터 스토어에 설치할지 결정
+	2. 어느 네트워크에 설치할지 결정
+2. vCenter 도메인 생성
+	1. VCSA.~.com (hostname, domainname)
+	2. DNS Server에 IP랑 domainname 등록되어야함
+	3. DNS 서버에 고정 IP
+	4. 역할 기능 추가
+	5. DNS 서버 추가
+	6. DNS 관리자.
+	7. 도메인 추가
+	8. IP랑 도메인 연결
+
+
+install > 존재하는 esxi, 172.16.4.41, root, VMware1! > ID, Password 설정
