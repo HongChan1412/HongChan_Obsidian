@@ -96,7 +96,8 @@ vCenter Server Appliance Installation
 	5. DNS 서버 추가
 	6. DNS 관리자.
 	7. 도메인 추가
-	8. IP랑 도메인 연결
+	8. 영역 추가정방향 연결
+	9. IP랑 도메인 연결
 
 
 install > 존재하는 esxi, 172.16.4.41, root, VMware1! > ID, Password 설정
