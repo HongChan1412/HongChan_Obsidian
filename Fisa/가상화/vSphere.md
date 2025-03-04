@@ -121,6 +121,8 @@ install > 존재하는 esxi, 172.16.4.41, root, VMware1! > ID, Password 설정
 ### VAMI
 vCenter Server Appliance Management Interface
 
+시간설정과 백업 가능
+
 라이센스 확인
 데이터센터에서
 폴더 생성
@@ -129,3 +131,8 @@ add host
 permission : 허가
 privilege : 권한
 role : 역할
+
+Administrator와 No Access가 동시에 존재할때 Administrator가 우선
+사용자에게 직접 권한이 항상 우선
+
+복구할때는 restore, 백업한 파일 선택
