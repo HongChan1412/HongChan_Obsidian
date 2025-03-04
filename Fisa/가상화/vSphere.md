@@ -136,3 +136,5 @@ Administrator와 No Access가 동시에 존재할때 Administrator가 우선
 사용자에게 직접 권한이 항상 우선
 
 복구할때는 restore, 백업한 파일 선택
+
+소스 mac 해시 기준 라우팅
