@@ -84,6 +84,10 @@ VMnet1 : HostOnly
 ### VCSA
 vCenter Server Appliance Installation
 
+vCenter : 가상머신과 ESXI 호스트 를 중앙관리하기 위함
+- 고 가용성
+vCenter를 여러대 두는 이유 : 가상머신과 esx host를 관리하는데 지역적인 위치로 따로 관리
+여러 vCenter를 하나의 도메인으로 쓰기 위해 : enhanced linked mode
 
 1. 어느 ESXI에 VCSA 설치할지 결정
 	1. 어느 데이터 스토어에 설치할지 결정
@@ -101,3 +105,27 @@ vCenter Server Appliance Installation
 
 
 install > 존재하는 esxi, 172.16.4.41, root, VMware1! > ID, Password 설정
+
+---
+### 프로비저닝
+씬 프로비저닝 : 쓸때마다 용량을 필요로함
+씩 프로비저닝 : 성능이 필요할때
+- eager-zeroed : 모두 포맷해서 제공
+- lazy-zeroed : 쓸때마다 포맷해서 제공
+씬 프로비저닝 -> 씩 프로비저닝 (가능)
+씩 프로비저닝 -> 씬 프로비저닝 (불가능)
+
+오버프로비저닝 : 용량 다차기 전에 모니터링
+
+---
+### VAMI
+vCenter Server Appliance Management Interface
+
+라이센스 확인
+데이터센터에서
+폴더 생성
+add host
+
+permission : 허가
+privilege : 권한
+role : 역할
