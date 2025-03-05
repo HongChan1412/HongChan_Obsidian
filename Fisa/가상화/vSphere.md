@@ -138,3 +138,16 @@ Administrator와 No Access가 동시에 존재할때 Administrator가 우선
 복구할때는 restore, 백업한 파일 선택
 
 소스 mac 해시 기준 라우팅
+
+---
+### Datastores
+
+VMware가 사용할 공간
+
+VMFS : 사용하려면 무조건 포맷
+NFS : Network File System
+vSAN
+vSphere Virtual Volumes
+
+윈도우즈 끼리 파일 공유는 SMB
+NFS
