@@ -175,7 +175,7 @@ IP 할당
 ESX호스트에 새 스토리지 > 데이터 스토어 추가 >  NFS > NFS3 > 폴더 : /4share, 서버 : IP > 
 
 ---
-### iscsi
+### iSCSi
 역할 > ISCI 대상 서버 > 
 
 가상 디스크 생성 > 위치 > 이름 > 크기 > 대상  > 엑세서 서버 추가 및 허용
@@ -184,3 +184,14 @@ ESX호스트에 새 스토리지 > 데이터 스토어 추가 >  NFS > NFS3 > �
 컴퓨터 관리 > 저장소 > 디스크 관리에서 확인
 
 ISCSI 서버에서 엑세스 서버를 esxi 서버 IP 할당 > VM kernel 어댑터 추가, 안쓰는 IP 할당 > 스토리지 어댑터 > 소프트웨어 어댑터 추가 > ISCSI 어댑터 추가 > 네트워크 포트 바인딩 > 추가 > 동적검색 > ISCSI 서버 추가 > 스토리지 다시 검색 > 디바이스 새로고침  > 디바이스 발견되면 새 데이터 스토어 VMFS로 추가
+
+---
+### Template & Clone
+
+Convert to Template : 시간 없고, 용량 없으면 바로 변환 가능
+Clone > Clone to Template : 복사 후 Template으로 변환하기 때문에 시간이 많이 걸려도 기존 VM 사용 가능
+폴더 생성 > Template 생성
+그냥 Clone 하면 IP 충돌할 수 있음
+
+Windows VM 생성 > 시스템, 정보 변경 > IP 변경 > convert to template
+vCenter > 정책 및 프로파일 > VM 사용자 지정 규격 만들기 > template으로 vm 생성 > 바뀐 Sid, ip, 시스템 정보 변경 확인
