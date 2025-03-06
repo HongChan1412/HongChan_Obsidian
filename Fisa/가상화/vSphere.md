@@ -195,3 +195,13 @@ Clone > Clone to Template : 복사 후 Template으로 변환하기 때문에 시
 
 Windows VM 생성 > 시스템, 정보 변경 > IP 변경 > convert to template
 vCenter > 정책 및 프로파일 > VM 사용자 지정 규격 만들기 > template으로 vm 생성 > 바뀐 Sid, ip, 시스템 정보 변경 확인
+
+---
+### 메모리, 하드 추가
+
+전원 끄기 > 메모리 Hot 사용 > 전원 키기 > 메로리 증가
+
+---
+### Migrate
+
+VM의 메모리는 esxi에 저장되어 있기 때문에 다른 esxi로 옮기면 옮긴 VM에 메모리의 정보도 esxi에 저장해야함
