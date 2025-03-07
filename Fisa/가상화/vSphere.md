@@ -199,6 +199,10 @@ vCenter > 정책 및 프로파일 > VM 사용자 지정 규격 만들기 > templ
 IP, SID, PC 이름이 중복되면 안됨.
 VM Customazation Config에서 알맞게 바꿔줘야함.
 
+리눅스는 perl이 설치되어있어야함.
+
+컨텐츠 라이브러리 : iso, ova, template파일을 관리하기 위해 사용
+
 ---
 ### 메모리, 하드 추가
 
@@ -208,3 +212,15 @@ VM Customazation Config에서 알맞게 바꿔줘야함.
 ### Migrate
 
 VM의 메모리는 esxi에 저장되어 있기 때문에 다른 esxi로 옮기면 옮긴 VM에 메모리의 정보도 esxi에 저장해야함
+
+---
+### vMotion
+
+Cold Migration
+VMKernel
+- Hot Migration
+- 켜져있는 상태에서 마이그레이션 하기 위해 vMotion용 전용 kernel이 필요함
+- 트래픽을 많이 잡아서 따로 나누는게 좋음
+
+---
+### 
