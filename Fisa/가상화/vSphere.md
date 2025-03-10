@@ -236,3 +236,5 @@ VMKernel
 ### Clusters
 HA : High abavility (고가용성)
 FT : Fault tollerance
+
+DRS : 
